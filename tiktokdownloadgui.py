@@ -85,6 +85,5 @@ layout = [ [sg.Text('请粘贴视频链接')],
            [sg.OK()] ]
 event,value = sg.Window('请粘贴视频链接').Layout(layout).Read()
 link = (str(value))[5:-2]
-print(link)
 video_download(link,"no")
 sg.Popup(event)
