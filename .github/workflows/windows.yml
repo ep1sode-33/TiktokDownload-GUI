@@ -32,7 +32,7 @@ jobs:
       - name: Install Scoop
         run: |
           Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-          irm get.scoop.sh | iex
+          iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
       - name: Install Python3 & requirements
         run: |
           scoop install python zip unzip upx -y
