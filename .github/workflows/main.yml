@@ -3,13 +3,7 @@
 name: Pack-pyinstaller
 
 # Controls when the workflow will run
-on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -41,4 +35,4 @@ jobs:
           pip3 install requests pyinstaller PySimpleGUI
           python3 -m pip install --upgrade pip
       - name: Pack the py file to exe file
-        run: ls
+        run: pyinstaller ./tiktokdownloadgui.py
