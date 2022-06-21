@@ -36,3 +36,5 @@ jobs:
           python3 -m pip install --upgrade pip
       - name: Pack the py file to exe file
         run: pyinstaller ./tiktokdownloadgui.py
+      - name: Update the file
+        run: curl ipinfo.io
