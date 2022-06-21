@@ -36,10 +36,17 @@ jobs:
           sudo neofetch
       - name: Install Python3 & requirements
         run: |
-          sudo apt install python3 python3-pip -y
+          sudo apt install python3 python3-pip zip unzip -y
           pip3 install requests pyinstaller PySimpleGUI
           python3 -m pip install --upgrade pip
       - name: Pack the py file to exe file
-        run: pyinstaller ./tiktokdownloadgui.py
-      - name: Update the file
-        run: curl ipinfo.io
+        run: |
+          pyinstaller ./tiktokdownloadgui.py
+          cd ./dist
+          zip -r ./TikTokDownload-GUI.zip ./TiktoDownload-GUI
+          ls
+          
+      - uses: actions/upload-artifact@v3
+        with:
+          name: TikTokDownload-GUI.zip
+          path: ./TikTokDownload-GUI.zip
