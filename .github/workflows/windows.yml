@@ -35,7 +35,7 @@ jobs:
           iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
           scoop install python zip unzip upx -g
           python -m pip install --upgrade pip
-          pip3 install requests pyinstaller PySimpleGUI
+          pip3 install requests pyinstaller PySimpleGUI retrying
           pyinstaller ./TiktokDownload-GUI.py
           cd ./dist
           zip -r ./TikTokDownload-GUI.zip ./TiktokDownload-GUI
