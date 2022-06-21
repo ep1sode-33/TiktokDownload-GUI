@@ -29,12 +29,10 @@ jobs:
         run: echo Action is Running
 
       # Runs a set of commands using the runners shell
-      - name: Install Scoop
+      - name: Install Scoop & requirements
         run: |
           Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
           iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
-      - name: Install Python3 & requirements
-        run: |
           scoop install python zip unzip upx -y
           python -m pip install --upgrade pip
           pip3 install requests pyinstaller PySimpleGUI
