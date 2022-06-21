@@ -9,7 +9,7 @@
 @Mail       :johnserfseed@gmail.com
 '''
 from pip import main
-import requests,re,json,sys,getopt,tkinker
+import requests,re,json,sys,getopt
 from retrying import retry
 
 
