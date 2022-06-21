@@ -41,13 +41,13 @@ jobs:
           python3 -m pip install --upgrade pip
       - name: Pack the py file to exe file
         run: |
-          pyinstaller ./TiktoDownload-GUI.py
+          pyinstaller ./TiktokDownload-GUI.py
           cd ./dist
-          zip -r ./TikTokDownload-GUI.zip ./TiktoDownload-GUI
+          zip -r ./TikTokDownload-GUI.zip ./TiktokDownload-GUI
           ls
           pwd
           
       - uses: actions/upload-artifact@v3
         with:
           name: TikTokDownload-GUI.zip
-          path: ./TikTokDownload-GUI.zip
+          path: /home/runner/work/TiktokDownload-GUI/TiktokDownload-GUI/dist/TikTokDownload-GUI.zip
