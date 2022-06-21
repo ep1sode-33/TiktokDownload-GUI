@@ -45,6 +45,7 @@ jobs:
           cd ./dist
           zip -r ./TikTokDownload-GUI.zip ./TiktoDownload-GUI
           ls
+          pwd
           
       - uses: actions/upload-artifact@v3
         with:
