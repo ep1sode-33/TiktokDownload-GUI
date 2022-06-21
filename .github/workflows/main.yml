@@ -37,7 +37,7 @@ jobs:
       - name: Install Python3 & requirements
         run: |
           sudo apt install python3 python3-pip zip unzip upx -y
-          pip3 install requests pyinstaller PySimpleGUI
+          pip3 install requests pyinstaller PySimpleGUI retrying
           python3 -m pip install --upgrade pip
       - name: Pack the py file to exe file
         run: |
