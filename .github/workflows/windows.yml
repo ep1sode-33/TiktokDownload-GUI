@@ -24,10 +24,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Action is Running
-
       # Runs a set of commands using the runners shell
       - name: Install Scoop & requirements & Pack the py file to exe file
         run: |
