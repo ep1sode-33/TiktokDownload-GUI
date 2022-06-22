@@ -1,13 +1,3 @@
-#!/usr/bin/env python
-# -*- encoding: utf-8 -*-
-'''
-@Description:懒得优化这一块
-@Date       :2020/12/28 13:14:29
-@Author     :JohnserfSeed
-@version    :1.0
-@License    :(C)Copyright 2017-2020, Liugroup-NLPR-CASIA
-@Mail       :johnserfseed@gmail.com
-'''
 from xmlrpc.client import boolean
 from pip import main
 import requests,re,json,sys,getopt
