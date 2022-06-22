@@ -8,6 +8,7 @@
 @License    :(C)Copyright 2017-2020, Liugroup-NLPR-CASIA
 @Mail       :johnserfseed@gmail.com
 '''
+from xmlrpc.client import boolean
 from pip import main
 import requests,re,json,sys,getopt
 from retrying import retry
@@ -80,10 +81,16 @@ def video_download(urlarg,musicarg):
         download(video_url,music_url,video_title,music_title,headers,musicarg)
 
 
-layout = [ [sg.Text('请粘贴视频链接')],
-           [sg.Input()],
-           [sg.OK()] ]
-event,value = sg.Window('请粘贴视频链接').Layout(layout).Read()
-link = (str(value))[5:-2]
-video_download(link,"no")
+layout = [ 
+    [sg.Text('请粘贴视频链接')],
+    [sg.Input()],
+    [sg.Checkbox('音乐下载', size=(14,1))],
+    [sg.OK()]
+]
+event,value = sg.Window('TiktokDownload-GUI  --  By aoligei-max').Layout(layout).Read()
+if value[1] == True:
+    musicdlpass = "yes"
+else:
+    musicdlpass = "no"
+video_download(value[0],musicdlpass)
 sg.Popup(event)
