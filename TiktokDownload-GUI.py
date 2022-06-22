@@ -83,4 +83,4 @@ if value[1] == True:
 else:
     musicdlpass = "no"
 video_download(value[0],musicdlpass)
-sg.Popup(event)
+sg.Popup(str(event) + ", 下载完啦~")
