@@ -31,16 +31,20 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install Scoop & requirements & Pack the py file to exe file
         run: |
+          echo Install_scoop
           Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
           iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
-          scoop install python zip unzip upx -g
+          echo Install_requirements
+          scoop install python zip unzip upx neofetch-g
           C:\ProgramData\scoop\apps\python\current\python.exe -m pip install --upgrade pip
           pip3 install requests pyinstaller PySimpleGUI retrying
+          echo Pack_the_file
           pyinstaller ./TiktokDownload-GUI.py
           cd ./dist
           zip -r ./TikTokDownload-GUI.zip ./TiktokDownload-GUI
           ls
           pwd
+          neofetch
           
       - uses: actions/upload-artifact@v3
         with:
