@@ -35,7 +35,7 @@ jobs:
           C:\ProgramData\scoop\apps\python\current\python.exe -m pip install --upgrade pip
           pip3 install requests pyinstaller PySimpleGUI retrying
           echo Pack_the_file
-          pyinstaller ./TiktokDownload-GUI.py
+          pyinstaller -F ./TiktokDownload-GUI.py
           cd ./dist
           zip -r ./TikTokDownload-GUI.zip ./TiktokDownload-GUI
           
