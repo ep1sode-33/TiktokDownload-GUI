@@ -41,4 +41,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: TikTokDownload-GUI-windows
-          path: D:\a\TiktokDownload-GUI\TiktokDownload-GUI\dist\TikTokDownload-GUI.exe
+          path: D:\a\TiktokDownload-GUI\TiktokDownload-GUI\dist\TiktokDownload-GUI.exe
