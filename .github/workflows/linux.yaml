@@ -47,4 +47,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: TikTokDownload-GUI-linux
-          path: /home/runner/work/TiktokDownload-GUI/TiktokDownload-GUI/dist/TikTokDownload-GUI
+          path: /home/runner/work/TiktokDownload-GUI/TiktokDownload-GUI/dist/TiktokDownload-GUI
