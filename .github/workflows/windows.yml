@@ -31,15 +31,14 @@ jobs:
           Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
           iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
           echo Install_requirements
-          scoop install python zip upx -g
+          scoop install python zip upx winfetch -g
           C:\ProgramData\scoop\apps\python\current\python.exe -m pip install --upgrade pip
           pip3 install requests pyinstaller PySimpleGUI retrying
           echo Pack_the_file
           pyinstaller -F ./TiktokDownload-GUI.py
-          cd ./dist
-          zip -r ./TikTokDownload-GUI.zip ./TiktokDownload-GUI
+          winfetch
           
       - uses: actions/upload-artifact@v3
         with:
           name: TikTokDownload-GUI-windows
-          path: D:\a\TiktokDownload-GUI\TiktokDownload-GUI\dist\TikTokDownload-GUI.zip
+          path: D:\a\TiktokDownload-GUI\TiktokDownload-GUI\dist\TikTokDownload-GUI.exe
